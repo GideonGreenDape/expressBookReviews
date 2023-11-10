@@ -103,7 +103,7 @@ public_users.get('/author/:author', function (req, res) {
 
     fetchAuthor(author).then((success) => {
         if (success.length > 0) {
-            res.status(300).send(JSON.stringify(pointer, null, 4))
+            res.status(300).send(JSON.stringify(success, null, 4))
         } else {
             res.status(300).send('this author does not exist');
         }
