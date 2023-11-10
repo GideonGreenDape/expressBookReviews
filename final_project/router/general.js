@@ -19,10 +19,11 @@ public_users.post("/register", (req, res) => {
         }
         else if (users.length == 0) {
             users.push({
-                'username': username,
-                'password': password
+                "username": username,
+                "password": password
             });
-            res.status(300).send('account registered successfully')
+            console.log(users);
+            res.status(300).send('customer account registered successfully')
         }
     }
     else {
